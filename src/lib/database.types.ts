@@ -171,6 +171,39 @@ export interface Database {
         }
         Relationships: []
       }
+      instagram_reel_metrics: {
+        Row: {
+          reel_url: string
+          media_id: string | null
+          views: number | null
+          likes: number | null
+          comments: number | null
+          shares: number | null
+          fetched_at: string
+          last_error: string | null
+        }
+        Insert: {
+          reel_url: string
+          media_id?: string | null
+          views?: number | null
+          likes?: number | null
+          comments?: number | null
+          shares?: number | null
+          fetched_at?: string
+          last_error?: string | null
+        }
+        Update: {
+          reel_url?: string
+          media_id?: string | null
+          views?: number | null
+          likes?: number | null
+          comments?: number | null
+          shares?: number | null
+          fetched_at?: string
+          last_error?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
